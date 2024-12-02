@@ -1,9 +1,18 @@
 #include <stdio.h>
 int main() {
-    int arr[] = {1, 2, 3, 4, 5}, n = 5, sorted = 1;
+    int n, sorted = 1;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements: ", n);
+    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+
     for (int i = 1; i < n; i++) {
-        if (arr[i] < arr[i - 1]) { sorted = 0; break; }
+        if (arr[i] < arr[i - 1]) {
+            sorted = 0;
+            break;
+        }
     }
-    printf(sorted ? "Sorted" : "Not Sorted");
+    printf(sorted ? "Array is sorted" : "Array is not sorted");
     return 0;
 }
