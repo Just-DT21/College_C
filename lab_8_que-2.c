@@ -1,7 +1,13 @@
 #include <stdio.h>
 int main() {
-    int arr[] = {4, 7, 1, 9, -3, 2}, n = 6, sum = 0;
+    int n, sum = 0;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements: ", n);
+    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+
     for (int i = 1; i < n; i += 2) sum += arr[i];
-    printf("Sum: %d", sum);
+    printf("Sum of odd index elements: %d", sum);
     return 0;
 }
